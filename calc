@@ -1,0 +1,103 @@
+import time
+import cmath
+
+print ("Welcome to the Calculator!")
+
+print ("You can do many functions on here, such as:")
+print (" - Addition")
+print (" - Subtraction")
+print (" - Multiplication")
+print (" - Division")
+print (" - Algeabraic Calculations")
+
+
+def add():
+    a_num1 = int(input("Choose the first number you would like to add: "))
+    a_num2 = int(input("Choose the second number you would like to add: "))
+    print ("Performing Calculation: ", a_num1, "+", a_num2 ,"...")
+    time.sleep(1)
+    a_calc = a_num1 + a_num2
+    print ("The answer to ", a_num1, "+",a_num2, " is ", a_calc )
+
+def subtract():
+    s_num1 = int(input("Choose the first number you would like to subtract: "))
+    s_num2 = int(input("Choose the second number you would like to subtract: "))
+    print ("Performing Calculation: ", s_num1, "+", s_num2 ,"...")
+    time.sleep(1)
+    s_calc = s_num1 - s_num2
+    print ("The answer to ", s_num1, "+",s_num2, " is ", s_calc )
+
+def multiply():
+    m_num1 = int(input("Choose the first number you would like to multiply: "))
+    m_num2 = int(input("Choose the second number you would like to multiply: "))
+    print ("Performing Calculation: ", m_num1, "+", m_num2 ,"...")
+    time.sleep(1)
+    m_calc = m_num1 * m_num2
+    print ("The answer to ", m_num1, "+",m_num2, " is ", m_calc )
+
+def divison():
+    d_num1 = int(input("Choose the first number you would like to divide: "))
+    d_num2 = int(input("Choose the second number you would like to divide: "))
+    print ("Performing Calculation: ", d_num1, "+", d_num2 ,"...")
+    time.sleep(1)
+    d_calc = d_num1 / d_num2
+    print ("The answer to ", d_num1, "+",d_num2, " is ", d_calc )
+
+def algebra():
+    print ("Choose between these options:")
+    print (" - Quadratic Formula (Type 'Q')")
+    print (" - Find the gradient of a line (Type 'G')")
+    choice = input()
+
+    if choice == "Q":
+        print ("Enter the values a,b,c from the expression: 'ax² + bx + c'")
+        
+        print ("To be put in this formula: ")
+
+        print (" -b ± √b² - 4ac")
+        print (" ---------------")
+        print ("       2a")
+
+        a = int(input(" Input the value of 'a' "))
+        b = int(input(" Input the value of 'b' "))
+        c = int(input(" Input the value of 'c' "))
+
+        print ("Now performing calculation...")
+
+        d = (b**2) - (4*a*c)
+        sol1 = (-b-cmath.sqrt(d))/(2*a)
+        sol2 = (-b+cmath.sqrt(d))/(2*a)
+
+        print('The solution are {0} and {1}'.format(sol1,sol2))
+        
+        
+print ("What would you like to do?")
+print ("")
+time.sleep(1)
+print (" - 'A' for addition")
+time.sleep(1)
+print (" - 'S' for subtraction")
+time.sleep(1)
+print (" - 'M' for multiplication")
+time.sleep(1)
+print (" - 'D' for division")
+time.sleep(1)
+print (" - 'AL' for algeabraic calculations")
+time.sleep(1)
+print ("")
+choice = input()
+
+if choice == "A":
+    add()
+
+elif choice == "S":
+    subtract()
+
+elif choice == "M":
+    multiply()
+
+elif choice == "D":
+    divide()
+
+elif choice == "AL":
+    algebra()
