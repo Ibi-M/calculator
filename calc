@@ -68,7 +68,33 @@ def algebra():
         sol1 = (-b-cmath.sqrt(d))/(2*a)
         sol2 = (-b+cmath.sqrt(d))/(2*a)
 
-        print('The solution are {0} and {1}'.format(sol1,sol2))
+        print("The solutions are: X =",sol1,"and X =",sol2)
+    
+    elif choice == "G":
+        cont = False
+        while cont == False:
+            print ("Choose two coordinates from your line")
+            print ("")
+            time.sleep(1)
+            xv1 = int(input("Enter the x value of the first coordinate"))
+            yv1 = int(input("Enter the y value of the first coordinate"))
+            print ("")
+            xv2 = int(input("Enter the x value of the second coordinate"))
+            yv2 = int(input("Enter the y value of the second coordinate"))
+
+            print("Your coordinates are: (",xv1,",",yv1,") and (",xv2,",",yv2,")  ")
+            confirm = input("Is that correct? ")
+            if confirm == "Y":
+                cont = True
+            elif confirm == "No":
+                cont = False
+
+        v1 = yv2 - yv1
+        v2 = xv2 - xv1
+        answer = v1/v2
+
+        print ("The gradient of the line is: ", answer)
+        
         
         
 print ("What would you like to do?")
